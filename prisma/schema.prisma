@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  email         String    @unique
+  password      String    @default("")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  emailVerified DateTime? @map("verifiedAt")
+  sessions      Session[]
+
+  @@map("users")
+}
+
+model Channel {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  chnl_id    String   @unique
+  created_by String?
+  chnl_name  String
+  chnl_desc  String
+  category   String   @default("social")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("channels")
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  email        String   @unique
+  sessionToken String   @unique
+  userId       String   @db.ObjectId
+  expires      DateTime @map("expiresAt")
+  user         User     @relation(fields: [userId], references: [id])
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  email       String
+  identifier  String?
+  accessToken String?   @unique
+  expires     DateTime? @map("expiresAt")
+
+  @@unique([identifier, accessToken])
+  @@map("verification_tokens")
+}

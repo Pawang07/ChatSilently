@@ -1,0 +1,61 @@
+{
+  "name": "chat_with_me",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^1.0.6",
+    "@auth/supabase-adapter": "^0.1.7",
+    "@next-auth/prisma-adapter": "^1.0.7",
+    "@nextui-org/react": "^2.2.5",
+    "@prisma/client": "^5.7.1",
+    "@supabase/supabase-js": "^2.38.4",
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
+    "ably": "^1.2.48",
+    "bcrypt": "^5.1.1",
+    "framer-motion": "^10.16.4",
+    "geist": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.292.0",
+    "mongodb": "^6.2.0",
+    "mongoose": "^8.0.0",
+    "next": "^14.0.4",
+    "next-auth": "^4.24.4",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.12.0",
+    "react-particles": "^2.12.2",
+    "react-share": "^5.0.3",
+    "recoil": "^0.7.7",
+    "resend": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8",
+    "prisma": "^5.7.1",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

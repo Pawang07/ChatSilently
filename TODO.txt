@@ -1,0 +1,17 @@
+- Replace the server-helper function with mongoose ✅
+- Dark/Light mode ✅
+- Fix Login screen password input show password button, there is a bug ✅
+- Add jwt session strategy ✅
+- Feature ✨: Creating a channel ✅
+- Feature ✨: Email verification ✅
+- Feature ✨: Chatting
+
+
+- FIX: add a logo to /register page ✅
+- FIX: don't allow authorized users to any of /login or /register pages ✅
+
+
+
+Vercel:
+
+-  When using a third-party service it is important to keep in mind that the client should be used to subscribe to events, while all publishing should be handled by a Serverless Function. 
